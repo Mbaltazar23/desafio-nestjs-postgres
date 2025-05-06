@@ -1,4 +1,4 @@
-#  Desafio : Desarrollo de una API REST con NestJS y PostgreSQL con Docker como contenedor
+#  Desarrollo de una API REST con NestJS y PostgreSQL con Docker como contenedor
 
 Este proyecto es una API muy simple. Sirve para consultar una **categoría** (como "Motor", "Chasis", etc.) según su número (ID), solo siguiendo estos pasos.
 
@@ -28,7 +28,7 @@ Abre la terminal de tu computador (símbolo del sistema, Terminal o PowerShell) 
 
 ```bash
 git clone https://github.com/Mbaltazar23/desafio-nestjs-postgres.git
-cd esafio-nestjs-postgres 
+cd desafio-nestjs-postgres 
 ```
 
 ---
