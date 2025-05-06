@@ -26,9 +26,10 @@ Posterio a ello se abre el enlace el cual esta el repositorio subido y se busca 
 
 Abre la terminal de tu computador (símbolo del sistema, Terminal o PowerShell) y escribe esto:
 
-```
+```bash
 git clone https://github.com/Mbaltazar23/desafio-nestjs-postgres.git
-cd esafio-nestjs-postgres ````
+cd esafio-nestjs-postgres 
+```
 
 ---
 
@@ -42,7 +43,6 @@ POSTGRES_PORT=5432
 POSTGRES_USER=postgres
 POSTGRES_PASSWORD=postgres
 POSTGRES_DB=categoriasdb
-
 ```
 
 Este archivo le dice a Docker cómo llamar a la base de datos, con qué clave y en qué lugar.
@@ -53,12 +53,16 @@ Este archivo le dice a Docker cómo llamar a la base de datos, con qué clave y 
 
 Este comando crea todo automáticamente:
 
-```docker-compose up --build ```
+```bash
+docker-compose up --build 
+```
 
 Esto puede tardar unos minutos la primera vez. Verás muchos mensajes. Cuando veas algo como esto:
 
+```bash
+[Nest] App running on http://localhost:3000 
+
 ```
-[Nest] App running on http://localhost:3000```
 
 ¡Listo! Ya está funcionando.
 
@@ -71,12 +75,16 @@ Ahora tienes que decirle al sistema qué categorías existen. Para eso:
 1. Abre una nueva terminal
 2. Escribe esto:
 
-``` docker exec -it nestjs-categorias-api-app-1 bash```
+```bash
+ docker exec -it nestjs-categorias-api-app-1 bash
+ ```
 
 3. Luego escribe:
 
-``` npm run migration:run ```
-``` npm run seed ```
+```bash
+npm run migration:run
+npm run seed 
+```
 
 Con esto, la base de datos queda con los datos que necesita.
 
@@ -96,7 +104,7 @@ Puedes hacerlo de dos formas:
 4. Presiona el botón **Send**
 5. Verás algo así:
 
-```
+```json
 {
   "id": 1,
   "nombre": "Neumáticos"
@@ -105,7 +113,7 @@ Puedes hacerlo de dos formas:
 
 Si el número que pusiste no existe, verás:
 
-```
+```json
 {
   "error": "Categoría no encontrada"
 }```
@@ -118,8 +126,9 @@ Y aparecerá en rojo con un código 404 (eso significa que no se encontró).
 
 Escribe esto:
 
+```bash 
+curl http://localhost:3000/categoria/1
 ```
-curl http://localhost:3000/categoria/1```
 
 También verás un resultado similar al anterior.
 
@@ -143,13 +152,15 @@ También verás un resultado similar al anterior.
 
 ### Para apagar todo
 
-``` 
-docker-compose down ```
+```bash
+docker-compose down 
+```
 
 ### Para volver a encender
 
-``` 
-docker-compose up --build ```
+```bash
+docker-compose up --build 
+```
 
 
 ---
