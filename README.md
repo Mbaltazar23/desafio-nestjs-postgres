@@ -116,7 +116,8 @@ Si el número que pusiste no existe, verás:
 ```json
 {
   "error": "Categoría no encontrada"
-}```
+}
+```
 
 Y aparecerá en rojo con un código 404 (eso significa que no se encontró).
 
