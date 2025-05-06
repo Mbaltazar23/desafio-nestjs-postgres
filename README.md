@@ -57,14 +57,7 @@ Este comando crea todo automáticamente:
 docker-compose up --build 
 ```
 
-Esto puede tardar unos minutos la primera vez. Verás muchos mensajes. Cuando veas algo como esto:
-
-```bash
-[Nest] App running on http://localhost:3000 
-
-```
-
-¡Listo! Ya está funcionando.
+Esto puede tardar unos minutos la primera vez, una vez cargue ya estára funcionando.
 
 ---
 
@@ -76,7 +69,7 @@ Ahora tienes que decirle al sistema qué categorías existen. Para eso:
 2. Escribe esto:
 
 ```bash
- docker exec -it nestjs-categorias-api-app-1 bash
+ docker exec -it desafio-nestjs-postgres-app-1 bash
  ```
 
 3. Luego escribe:
